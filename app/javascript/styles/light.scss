@@ -456,8 +456,8 @@ button.icon-button {
 .actions-modal {
   color: $primary-text-color;
 }
-.boost-modal__action-bar, 
-.confirmation-modal__action-bar, 
+.boost-modal__action-bar,
+.confirmation-modal__action-bar,
 .mute-modal__action-bar,
 .report-modal__action-bar  {
   & > div {
@@ -506,7 +506,7 @@ button.icon-button {
   color: lighten($ui-highlight-color, 30%);
 }
 
-.status__content 
+.status__content
 {
   a {
     color: $ui-highlight-color;
