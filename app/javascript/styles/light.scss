@@ -1,10 +1,10 @@
-$ui-base-color: #f7e8ed; // "darkest"
-$ui-base-alt: #f9f2f5;
+$ui-base-color: #fafafa; // "darkest"
+$ui-base-alt: #fafafa;
 $ui-base-lighter-color: darken($ui-base-color, 40%); // Lighter darkest
-$ui-secondary-color: #ead0d6; // "lightest"
-$ui-primary-color: #bf5677; // "lighter"
-$ui-highlight-color: #bf5677; // "vibrant"
-$primary-text-color: #382b32;
+$ui-secondary-color: darken($ui-base-color, 15%); // "lightest"
+$ui-primary-color: #5f4770; // "lighter"
+$ui-highlight-color: #5f4770; // "vibrant"
+$primary-text-color: #333;
 
 $header-color: $ui-primary-color;
 $header-text-color: #fff;
