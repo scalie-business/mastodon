@@ -1,2 +1,2 @@
-default: styles/application.scss
-light: styles/light.scss
+default: styles/light.scss
+mastodon: styles/application.scss

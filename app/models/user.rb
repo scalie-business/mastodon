@@ -3,7 +3,6 @@
 #
 # Table name: users
 #
-#  id                        :integer          not null, primary key
 #  email                     :string           default(""), not null
 #  created_at                :datetime         not null
 #  updated_at                :datetime         not null
@@ -30,7 +29,9 @@
 #  last_emailed_at           :datetime
 #  otp_backup_codes          :string           is an Array
 #  filtered_languages        :string           default([]), not null, is an Array
+#  theme                     :string           default("default"), not null
 #  account_id                :integer          not null
+#  id                        :integer          not null, primary key
 #  disabled                  :boolean          default(FALSE), not null
 #  moderator                 :boolean          default(FALSE), not null
 #  invite_id                 :integer

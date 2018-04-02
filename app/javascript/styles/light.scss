@@ -8,7 +8,7 @@ $primary-text-color: #333;
 
 $header-color: $ui-primary-color;
 $header-text-color: #fff;
-$icon-button-inactive-color: lighten(desaturate($ui-base-lighter-color, 20%), 20%);
+$icon-button-inactive-color: lighten(desaturate($ui-primary-color, 20%), 20%);
 
 
 $about-page-text: $primary-text-color;
@@ -21,29 +21,41 @@ $ui-base-lighter-color: darken($ui-base-color, 40%); // Lighter darkest
 
 $gold-star: #dd9d08;
 
-/* cybre-specific additions */
-
-.column .static-content.getting-started {
-  background-image: url('../images/logo-cybre-light.png');
-  background-size:auto 50%;
-  background-position: 50% 75%;
-  background-repeat:no-repeat;
+.landing-page__hero {
+    position:relative;
 }
 
-.ui, body {
-  background: $ui-base-color url('../images/background-cybre-light.png');
+.landing-page__hero::before {
+    content: " ";
+    display:block;
+    background-image:url("../images/handshake.png");
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-position:bottom center;
+    width:600px;
+    height:600px;
+    position:absolute;
+    bottom:-64px;
 }
 
 /* about.scss */
 
 .landing-page {
-  h1 {
+  h1, h3, h6 {
     color: $about-page-text;
     small {
       color: lighten($about-page-text, 10%);
+      span {
+        font-weight:bold;
+        color: $about-page-text;
+      }
     }
   }
   p, li {
+    color: $about-page-text;
+  }
+
+  .information-board__section span:last-child {
     color: $about-page-text;
   }
 
@@ -60,6 +72,10 @@ $gold-star: #dd9d08;
         bottom:-52px;
         left:-120px;
     }
+  }
+
+  .landing-page__logo img {
+    mix-blend-mode: initial;
   }
 
   .container.links {
@@ -109,6 +125,10 @@ $gold-star: #dd9d08;
   #mastodon-timeline {
     .column-header {
       color:white;
+    }
+
+    p a {
+      color: $ui-primary-color;
     }
   }
 }
@@ -390,6 +410,10 @@ button.icon-button {
     background: lighten($ui-primary-color, 10%);
   }
 }
+.column-link__badge {
+  background: lighten($ui-primary-color, 25%);
+}
+
 .column-subheading {
   background: darken($ui-primary-color, 5%);
   color:$white;
@@ -595,11 +619,6 @@ button.icon-button {
   }
 
   .sidebar {
-    .logo {
-      -webkit-filter: invert(100%);
-      filter: invert(100%);
-    }
-
     ul {
       ul {
         a {
