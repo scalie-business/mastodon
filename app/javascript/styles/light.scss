@@ -156,6 +156,10 @@ $gold-star: #dd9d08;
 
 /* components.scss */
 
+.drawer__inner__mastodon {
+  display: none;
+}
+
 .onboarding-modal__page {
   p {
     color: $primary-text-color;
